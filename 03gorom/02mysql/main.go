@@ -1,8 +1,11 @@
 package main
 
 import (
-	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+
+	"gorm.io/driver/mysql"
+
+	"github.com/devzzk/gotrainning/03gorom/models"
 )
 
 func main() {
@@ -13,4 +16,5 @@ func main() {
 	}
 
 	db.Create(mysql.Config{})
+	db.AutoMigrate(models.User{}, models.Product{})
 }
