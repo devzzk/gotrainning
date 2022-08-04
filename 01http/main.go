@@ -48,7 +48,7 @@ func indexHtml(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	server := http.Server{
-		Addr: "127.0.0.1:8000",
+		Addr: "127.0.0.1:8080",
 	}
 	/*
 		注意如果用goland 编辑器的话
